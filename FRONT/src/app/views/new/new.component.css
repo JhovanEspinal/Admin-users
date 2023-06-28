@@ -1,0 +1,67 @@
+.fond {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background: url(../../../assets/dashboard.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.titulo {
+    margin-left: 600px;
+}
+
+.formu {
+    margin-top: 20px;
+    margin-left: 120px;
+    background-color: rgba(255, 255, 255, 0.212);
+    width: 80%;
+}
+
+.crear {
+    background-color: rgba(70, 0, 150, 0.534);
+    border-color: rgba(108, 2, 196, 0.212);
+    margin-top: 5px;
+    margin-left: 750px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.campo {
+    margin: 10px 100px 10px 30px;
+}
+
+.campoN {
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.super {
+    padding-top: 20px;
+    display: flex;
+}
+
+.bS {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.212);
+    border-color: rgba(255, 255, 255, 0.212);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.alert-danger {
+    padding: 1px;
+    margin-bottom: -20px;
+    background-color: transparent !important;
+}
+
+.container-error-m {
+    background-color: transparent !important;
+    color: rgb(247, 119, 119);
+}

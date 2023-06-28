@@ -1,0 +1,57 @@
+.fond {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background: url(../../../assets/dashboard.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.card {
+    margin: 10px;
+    margin-top: 30px;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.container {
+    width: 100%;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 300px;
+}
+
+.errorR {
+    width: 1000px;
+}
+
+.super {
+    display: flex;
+}
+
+.titulo {
+    margin-top: 20px;
+    margin-left: 16.5cm;
+}
+
+.botonD {
+    margin: 20px 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modalTitle {
+    font-family: inherit;
+    font-size: 25px;
+    background: -webkit-linear-gradient( rgb(119, 0, 255), rgb(255, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btnEli {
+    margin-left: 10px;
+}

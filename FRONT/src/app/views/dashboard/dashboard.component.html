@@ -1,0 +1,66 @@
+<div class="fond">
+    <app-header (changeTermino)="buscarUsuarios($event)" [userF]="localUser"> </app-header>
+    <div class="super">
+        <button type="button" class="btn btn-danger botonD" (click)="return()">Desconectarme</button>
+        <h1 class="text-center titulo animated fadeIn fast">USUARIOS HIBOT</h1>
+    </div>
+    <div *ngIf="errorResult">
+        <img class="errorR" src="../../../assets/Lo sentimos.png" alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let user of users">
+                <div class="modal fade" id="collapseExample{{user._id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg modalContenido">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title modalTitle" id="exampleModalLabel">Usuario HIBOT</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="card-img-top img-fluid" src="../../../assets/{{user.img}}.png" alt="Card image cap">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><b>Nombre: </b>{{user.name}}</p>
+                                        <p><b>Cc: </b>{{user.cc}}</p>
+                                        <p><b>Cargo: </b>{{user.job}}</p>
+                                        <p><b>Email: </b>{{user.email}}</p>
+                                        <p><b>Genero: </b>{{user.gender}}</p>
+                                        <p><b>Edad: </b>{{user.age}} años</p>
+                                        <div>
+                                            <p><b>Descripción: </b>{{user.description}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div *ngIf="anAdmin">
+                                    <button type="button" class="btn btn-warning b" (click)="editUser(user._id)" data-bs-dismiss="modal">Editar</button>
+                                    <button type="button" class="btn btn-danger btnEli" (click)="deleteUser(user._id,user.name)" data-bs-dismiss="modal">Eliminar</button>
+                                </div>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card animated fadeIn">
+                    <img class="card-img-top img-fluid" src="../../../assets/{{user.img}}.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{user.name}}</h5>
+                        <p class="card-text">{{user.description}}</p>
+                        <p class="card-text"><small class="text-muted">Cargo : {{user.job}}</small></p>
+                        <div class="d-grid gap-2">
+                            <a class="btn btn-outline-primary" data-bs-toggle="modal" href="#collapseExample{{user._id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                 Ver más...
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <app-footer></app-footer>
+</div>

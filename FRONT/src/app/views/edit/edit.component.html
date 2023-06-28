@@ -1,0 +1,112 @@
+<div class="fond">
+    <div class="super">
+        <button type="text" class="btn btn-primary bS" (click)="return()">Regresar</button>
+        <h1 class="text-center titulo animated fadeIn fast tS">EDITAR USUARIO</h1>
+    </div>
+    <div class="container">
+
+        <form [formGroup]="editForm" (ngSubmit)="postForm(editForm.value)" class="formu animated fadeIn ">
+            <div class="form-row">
+                <div class="form-group col-md-6 campo">
+                    <label class="campoN">Nombre</label>
+                    <input type="text" class="form-control" formControlName="name" placeholder="Nombre">
+                    <div class="alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+                        <div class="container-error-m" *ngIf="name.errors.required">
+                            Nombre es un campo requerido
+                        </div>
+                        <div class="container-error-m" *ngIf="name.errors.minlength">
+                            Nombre requiere minimo 6 caracteres
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 campo">
+                    <label class="campoN">Cc</label>
+                    <input type="number" class="form-control" formControlName="cc" placeholder=" Numero de documento">
+                    <div class="alert-danger" *ngIf="cc.invalid && (cc.dirty || cc.touched)">
+                        <div class="container-error-m" *ngIf="cc.errors.required">
+                            Cc es un campo requerido
+                        </div>
+                        <div class="container-error-m" *ngIf="cc.errors.minlength">
+                            Cc requiere minimo 5 caracteres
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-6 campo">
+                <label class="campoN">Edad</label>
+                <input type="number" class="form-control" formControlName="age" placeholder="Edad">
+                <div class="alert-danger" *ngIf="age.invalid && (age.dirty || age.touched)">
+                    <div class="container-error-m" *ngIf="age.errors.required">
+                        Edad es un campo requerido
+                    </div>
+                    <div class="container-error-m" *ngIf="age.errors.min">
+                        Edad debe ser minimo 18
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-6 campo">
+                <label class="campoN">Genero</label>
+                <select class="form-control" formControlName="gender">
+                    <option>masculino</option>
+                    <option>femenino</option>
+                    <option>otro</option>
+                  </select>
+                <div class="alert-danger" *ngIf="gender.invalid && (gender.dirty || gender.touched)">
+                    <div class="container-error-m" *ngIf="gender.errors.required">
+                        Genero es un campo requerido
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6 campo">
+                    <label class="campoN">Cargo</label>
+                    <input type="text" class="form-control" formControlName="job" placeholder="Cargo">
+                    <div class="alert-danger" *ngIf="job.invalid && (job.dirty || job.touched)">
+                        <div class="container-error-m" *ngIf="job.errors.required">
+                            Cargo es un campo requerido
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 campo">
+                    <label class="campoN">Descripción</label>
+                    <input type="text" class="form-control" formControlName="description" placeholder="Que debemos saber sobre ti ?">
+                    <div class="alert-danger" *ngIf="description.invalid && (description.dirty || description.touched)">
+                        <div class="container-error-m" *ngIf="description.errors.required">
+                            Descripción es un campo requerido
+                        </div>
+                        <div class="container-error-m" *ngIf="description.errors.maxlength">
+                            Solo puedes ingresar un maximo de 50 caracteres
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 campo">
+                    <label class="campoN">Email</label>
+                    <input type="email" class="form-control" formControlName="email" placeholder="Correo electronico">
+                    <div class="alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+                        <div class="container-error-m" *ngIf="email.errors.required">
+                            Email es un campo requerido
+                        </div>
+                        <div class="container-error-m" *ngIf="email.errors.pattern && email.touched">
+                            Ingrese un correo valido
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-6 campo">
+                <label class="campoN">Contraseña</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Contraseña">
+                <div class="alert-danger" *ngIf="password.invalid && (password.dirty || password.touched)">
+                    <div class="container-error-m" *ngIf="password.errors.required">
+                        Contraseña es un campo requerido
+                    </div>
+                    <div class="container-error-m" *ngIf="password.errors.pattern && password.touched">
+                        Su contraseña debe terner minimo 8 caracteres, mayuscula,minuscula, un digito y un caracter especial
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary crear" [disabled]="!editForm.valid">Guardar Cambios</button>
+        </form>
+
+    </div>
+</div>
+<footer></footer>

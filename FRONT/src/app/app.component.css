@@ -1,0 +1,9 @@
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/fondo.jpg) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important; 
+
+}

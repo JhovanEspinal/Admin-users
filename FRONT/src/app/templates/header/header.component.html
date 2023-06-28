@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <div class="bar">
+        <a href="/dashboard/{{userF._id}}" class="navbar-brand titulo">Hibot</a>
+        <img class="perfilI" src="../../../assets/{{userF.img}}.png" alt="">
+        <h3 class="perfilT">{{userF.name}}</h3>
+    </div>
+    <div *ngIf="(userF.job === 'administrador')">
+        <button class="btn btn-primary agregarU" type="button" (click)="newUser()">Aregar nuevo usuario</button>
+    </div>
+    <form class="form-inline">
+        <div class="buscador">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" (keyup.enter)="buscarUsuario(buscarTermino.value)" #buscarTermino>
+            <div class="boton">
+                <button class="btn btn-primary" type="button" (click)="buscarUsuario(buscarTermino.value)">Buscar</button>
+            </div>
+        </div>
+    </form>
+</nav>

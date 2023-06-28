@@ -1,0 +1,23 @@
+<div class="fond">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+
+            <div class="fadeIn first">
+                <img src="assets/HIBOT_LOGO.png" id="icon" alt="User Icon" />
+            </div>
+
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email" formControlName="email" (click)="removeError()">
+                <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password" formControlName="password" (click)="removeError()">
+                <input type="submit" class="fadeIn fourth" value="Ingresar">
+            </form>
+
+            <div id="formFooter">
+                <div class="errorB" *ngIf="errorStatus">
+                    <p>{{errorMessage}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

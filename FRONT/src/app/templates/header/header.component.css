@@ -1,0 +1,46 @@
+.buscador {
+    display: flex;
+    margin: 2px;
+    margin-right: 10px;
+}
+
+.btn {
+    margin: 2px;
+    background-color: #e80054;
+    border-color: #e80054;
+}
+
+.bar {
+    display: flex;
+}
+
+.titulo {
+    font-family: fantasy;
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(119, 0, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 10px;
+    font-size: 200%;
+}
+
+.perfilI {
+    margin: 5px;
+    width: 50px;
+}
+
+.perfilT {
+    margin-left: 5px;
+    margin-top: 20px;
+    color: #e80054;
+    font-family: inherit;
+    font-size: 25px;
+    background: -webkit-linear-gradient( rgb(119, 0, 255), rgb(255, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.agregarU {
+    margin-left: 1100px;
+    background-color: #f59f00;
+    border-color: #f59f00;
+}
